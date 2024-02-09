@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Everything you need to know about HTML" />
+    <title>HTML Basics</title>
+  </head>
+  <body>
+    <h1>This is heading</h1>
+    <h2>This is heading</h2>
+    <h3>This is heading</h3>
+    <h4>This is heading</h4>
+    <h5>This is heading</h5>
+    <h6>This is heading</h6>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non in molestias
+      blanditiis at pariatur inventore vero totam quod reiciendis, assumenda
+      reprehenderit numquam odio?
+    </p>
+
+    <a href="http://www.youtube.com">Click here</a>
+    <a href="http://www.google.com" target="_blank">Google</a>
+
+    <img
+      src="https://tse1.mm.bing.net/th?id=OIP.8eJNMEsDP4uYuV4dl--i9gHaE8&pid=Api&P=0&h=180"
+      alt="image"
+    />
+
+    <!-- List -->
+    <!-- Ordered list  -->
+
+    <ol>
+      <li>Apple</li>
+      <li>Mango</li>
+      <li>Strawberry</li>
+    </ol>
+    <ol type="A">
+      <li>Apple</li>
+      <li>Mango</li>
+      <li>Strawberry</li>
+    </ol>
+    <!-- Unordered list -->
+    <ul>
+      <li>Scorpio</li>
+      <li>Swift</li>
+      <li>Creta</li>
+    </ul>
+    <ul type="square">
+      <li>Scorpio</li>
+      <li>Swift</li>
+      <li>Creta</li>
+    </ul>
+    <!-- Defination list -->
+
+    <dl>
+      <dt>Heading</dt>
+      <!-- Defination term -->
+      <dd>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam unde
+        modi laudantium. Corporis qui beatae quas eligendi blanditiis, aliquid
+        quidem eveniet quos voluptatem?
+      </dd>
+      <!-- defination defination -->
+      <dt>Heading 2</dt>
+      <dd>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam unde
+        modi laudantium. Corporis qui beatae quas eligendi blanditiis, aliquid
+        quidem eveniet quos voluptatem?
+      </dd>
+    </dl>
+
+    <!-- Table -->
+    <table border="4px">
+      <caption>
+        Table
+      </caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Roll No.</th>
+          <th>Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">Jasmeet</td>
+          <!-- Colspan is used to span/combine 2 columns -->
+          <td>21</td>
+          <td rowspan="2">C++</td>
+          <!-- rowspan is used to combine 2 rows -->
+        </tr>
+        <tr>
+          <td>Anjali</td>
+          <td>12</td>
+          <td>22</td>
+          <!-- <td>Punjabi</td> -->
+        </tr>
+        <tr>
+          <td>Rohan</td>
+          <td>12</td>
+          <td>23</td>
+          <td>Maths</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">footer</td>
+        </tr>
+      </tfoot>
+    </table>
+    <br />
+    <hr />
+    <!-- forms -->
+    <form action="#">
+      <div>
+        <label for="name">Name:</label>
+        <!-- values in for and id should be same -->
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name here"
+          required
+          autofocus
+        />
+        <!-- Autofocus attribute specifires that the element will get focus when the page loads -->
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" name="number" id="age" />
+      </div>
+      <div>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" />
+        <label for="other">Others</label>
+        <input type="radio" name="gender" id="other" />
+      </div>
+      <div>
+        <label for="check">Get daily updates</label>
+        <input type="checkbox" name="checkbox" id="check" />
+      </div>
+      <div>
+        <input type="color" name="color" id="color" />
+      </div>
+      <div>
+        <textarea name="text" id="text" cols="15" rows="5">
+Enter the text...</textarea
+        >
+      </div>
+      <div>
+        <select name="fruits" id="fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="grapes" selected>Grapes</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+    <video
+      src="gur.mp4"
+      controls
+      width="555"
+      loop
+      poster="https://tse1.mm.bing.net/th?id=OIP.8eJNMEsDP4uYuV4dl--i9gHaE8&pid=Api&P=0&h=180"
+    ></video>
+    <!-- autoplay - automatically starts the video when the page loads -->
+    <!-- loop - automatically starts the video when it ends -->
+    <!-- controls - give controls top tb=he video to start n stop -->
+    <!-- poster- gives thumbnail ti the video -->
+    <audio
+      src="HappyBirthdaySongOriginalDJBoBo-arabsongtop.mp3"
+      controls
+      muted
+    ></audio>
+    <!-- Initially the audio will be muted the user have to unmute it. -->
+
+    <!-- The "preload" attribute can have the following values:
+
+none: This is the default value. It indicates that the browser should not preload the audio file at all. The audio file will only start downloading when the user initiates playback.
+
+metadata: This value tells the browser to preload only the metadata of the audio file, such as its duration and basic information about the audio. This can be useful if you want to display the audio duration to the user without fully loading the audio data.
+
+auto: This value instructs the browser to preload the entire audio file as much as possible without delaying the loading of other important page content. The browser will try to load the audio file in the background so that it's ready to play when the user decides to start it. -->
+  </body>
+  <svg height="100" width="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+</html>
