@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element selector */
+        button{
+            background-color: rgb(17, 177, 17);
+            color: white;
+            padding:7px 9px;
+            border-radius: 9px;
+            font-weight: bold;
+            border: none;
+        }
+        /* Id selector */
+        #mydiv{
+            background-color: beige;
+        }
+        /* class selector */
+        .container{
+            color: rgb(14, 103, 103);
+        }
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* pseudo selectors */
+        button:hover{
+            background-color: rgb(14, 123, 14);
+        }
+        a:visited{
+            color: red;
+        }
+        a:link{
+            color: hotpink;
+        }
+        a:active{
+            background-color: aqua;
+        }
+        /* child selector */
+        div > p{
+            background-color: red;
+        }
+        /* direct child  */
+        /* descendant selector */
+        div p{
+            background-color: rgb(158, 158, 20);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci incidunt id quas, deserunt impedit accusamus fugit? Harum nam eos rerum nostrum corrupti minus!</p>
+    </div>
+    <div>
+        <section>
+            <p class="container">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla pariatur accusantium magni id nihil ratione sunt quia blanditiis deleniti ipsa? Facere a molestias, omnis recusandae quo delectus quam possimus illum harum placeat natus libero porro impedit architecto, voluptatum velit dolor quisquam ex laborum explicabo! Debitis.</p>
+
+        </section>
+    </div>
+    <button>click me</button>
+    <a href="http://www.google.com">Go to google</a>
+    <a href="http://www.facebook.com" target="_blank">Go to facebook</a>
+</body>
+</html>
