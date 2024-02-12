@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 12px;
+        }
+        .container{
+            /* width: 200px;
+            height: 200px; */
+            /* 1 px = 1/96 of inch */
+            background-color: rgb(0, 255, 234);
+            /* width: 50vw;  */
+            /* 50% of screen width */
+            /* height: 50vh; */
+            /* 50% of screen height */
+            border: 2px solid black;
+            margin: auto;
+            /* font-size: 24px; */
+        }
+        .child{
+            border: 2px solid red;
+            /* font-size: 2em; */
+            font-size: 3rem;
+            /* 2em means 2 times of parents size */
+        }
+        .parent{
+            height: 50vh;
+            width: 50vw;
+            background-color: rgb(223, 174, 101);
+        }
+        .kid{
+            height: 25vmin;
+            /* in laptop vmin is equal to vh */
+            width: 25vmax;
+            /* In laptop vmax is equal to vw */
+            border: 2px solid black;
+        }
+        .box{
+            border: 2px solid purple;
+            width: 50vw;
+            max-height: 50vh;
+            /* Set max height to 50% of viewport height */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, dolorem vel ducimus tempore odit culpa quo neque quibusdam, voluptatibus quis numquam autem esse.
+        <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos repudiandae perferendis temporibus quidem tempore esse magni eos ipsam libero dolores animi neque similique incidunt modi voluptatem sunt, delectus, ea asperiores. Sunt fugiat adipisci praesentium aperiam? Voluptatum, alias exercitationem reprehenderit saepe provident molestiae aliquid.</div>
+    </div>
+    <div class="parent">
+        <div class="kid">
+
+        </div>
+    </div>
+
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias hic provident a obcaecati quidem nisi eum autem animi tempora velit ad dicta similique sed fugiat totam ullam adipisci voluptatibus laboriosam, numquam deserunt eos vero voluptatum facere? Optio porro quo dignissimos nisi distinctio. Eligendi vel doloremque officia 
+    
+</body>
+</html>
