@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS specificity</title>
+    <style>
+        p{
+            color: brown;
+        }
+        #purple{
+            color: purple;
+        }
+        .orange{
+            color: orange;
+        }
+        .red-x{
+            color: red;
+        }
+        </style>
+</head>
+<body>
+    <p style="color:blue">Inline CSS has the highest specificity</p>
+    <p class="orange" id="purple">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate et sunt natus distinctio eum quis, sed rem pariatur voluptatem quidem magni dolore sequi fuga corrupti explicabo provident architecto? Quaerat ex in exercitationem atque.</p>
+
+    <!-- inline CSS > id selector> class or attribute selector> element selector > universal selector -->
+
+    <p  class="orange red-x">This paragraph color will be red</p>
+    <p  class="orange" class="red-x">This paragraph color will be orange</p>
+
+</body>
+</html>
