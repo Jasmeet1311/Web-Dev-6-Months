@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS display property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            border: 2px solid red;
+            /* display: inline; */
+            /* display: none; */ 
+            /* Element won't be visible.It will even remove the space occupied by the element */
+            /* visibility:hidden; */
+            /* Using this property the element will be hidden but its space remains inact */
+            display: inline-block;
+            padding: 50px;
+            margin: 10px;
+            width: 300px;
+            /* By setting inline-block margin top and padding top can be given to the elements and width can be given to inline element */
+        }
+        .box1{
+            border: 2px solid black;
+            display: inline-block;
+            width: 600px;
+            /* In order to give width to inline element  use property display:inline block*/
+            
+        }
+        .container{
+            border: 2px solid blue;
+            width: 50%;
+            height: 70vh;
+            /* display: flex;
+            justify-content: center; */
+            text-align: center;
+            /* to make the text horizontally centered */
+
+        }
+    </style>
+</head>
+<body>
+    <!-- div is a block element -->
+    <div class="box">
+        Lorem ipsum dolor sit amet 
+    </div>
+    <!-- span is a inline element -->
+    <span class="box1">
+        Lorem ipsum dolor sit.
+    </span>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur
+    </div>
+</body>
+</html>
