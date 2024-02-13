@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadows and outlines</title>
+    <style>
+      .box {
+        height: 34vh;
+        width: 20vw;
+        background-color: hotpink;
+        border: 2px solid black;
+
+        /* box-shadow: h-offset v-offset blur spread color inset; */
+        /* h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+        blur: The larger the value, the blurrier the shadow.
+        spread: Expands or shrinks the shadow size.
+        color: Defines the shadow color.
+        inset: Makes the shadow inner. */
+
+       
+      }
+      .box:hover{
+        box-shadow: 8px 9px 14px 6px rgb(126, 14, 70) ;
+      }
+      .text{
+        
+        margin: 18px 2px;
+        /* text-shadow: h-offset v-offset blur color; */
+        text-shadow: 6px 9px 3px brown ;
+        /* outline: width style color; */
+
+        outline: 6px dashed darkblue;
+        border: 25px solid red;
+        border-radius: 10px;
+        outline-offset: 15px;
+        /* outline is 23px away from content */
+        /* Using the outline-offset property, you can set the space between an outline and the edge or border of an element. */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias deleniti deserunt asperiores exercitationem, tempore velit soluta aliquam facilis obcaecati necessitatibus qui explicabo!</div>
+    <h4>Difference between outline and border</h4>
+    <ul>
+        <li>Position: Outlines don't take up space; they're drawn around the element, outside of any border.</li>
+        <li>Offset: Using the outline-offset property, you can set the space between an outline and the edge or border of an element.</li>
+        <li>Width: Borders can have varying widths on different sides, outlines have a uniform width.</li>
+        <li>
+            Rounded Corners: Borders can have rounded corners using border-radius, while outlines generally cannot.
+        </li>
+    </ul>
+  </body>
+</html>
