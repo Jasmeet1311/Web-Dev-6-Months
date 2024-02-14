@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling text overflow</title>
+    <style>
+        .box{
+            height: 20vh;
+            width: 20vw;
+            border: 2px solid blue;
+            /* overflow: scroll; */
+            /* Text will fit in the box and a scrollbar will appear */
+            /* overflow: auto; */
+            /* If the text will overflow scrollbar will appear otherwise not. */
+            /* overflow: hidden; */
+            /* Overflow text will hide */
+            /* overflow: visible;   */ 
+            /* Default behaviour */
+
+            /* white-space:nowrap; */
+            /* text will appear in one line */
+
+            /* text-overflow: ellipsis; */
+            /* Three dots will appear at the end. */
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+
+            /* Short-hand */
+            /* overflow: overflow-x overflow-y; */
+            overflow: hidden scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente ipsum, quisquam placeat accusantium eum neque similique provident dicta accusamus necessitatibus quas nam maiores sit aliquam molestiae iure sint deserunt totam earum quam beatae doloremque distinctio. Dolore, fugiat tempora dolorem magni nam culpa temporibus? Quas rem voluptatem doloremque veritatis ad, harum quo debitis repellat voluptatum! Dolor voluptatum quos eius modi sint deleniti illo labore, aperiam molestiae earum saepe, magni voluptatibus corporis illum fugiat minus quisquam. Neque, beatae labore! Inventore nesciunt aperiam nobis temporibus, mollitia exercitationem earum dolores impedit repellat et rerum.
+    </div>
+
+</body>
+</html>
