@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+        }
+        /* @media only screen and (max-width:500px){ 
+            body{
+                background-color: hotpink;
+            }
+        } */
+        /* portrait: if width is smaller than height eg- phone */
+        /* landscape : if width is larger than height eg: laptops monitors */
+        /* @media screen and (orientation: portrait){
+           body{
+            background-color: rgb(60, 0, 255);
+           }
+        } */
+        .container{
+            height: 40vh;
+            width: 30vw;
+            border: 2px solid black;
+            background-color: hotpink;
+        }
+        @media screen and (orientation:portrait) {
+            .container{
+                height: 123px;
+                width: 123px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+</body>
+</html>
