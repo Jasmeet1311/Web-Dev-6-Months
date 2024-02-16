@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        :root{
+            /* Global variables are defined in root */
+            --defWidth: 100vw;
+            --defHeight: 40vh;
+            --defColor: hotpink;
+            --defBodyColor: orange;
+            --bodyWidth: 50vw;
+        }
+        .container{
+            width: var(--defWidth);
+            height: var(--defHeight);
+            background-color: var(--defColor);
+            text-align: center;
+        }
+        .body{
+            display: inline-block;
+            background-color: var(--defBodyColor);
+            height: var(--defHeight);
+            width: var(--bodyWidth);
+        }
+        .body-2{
+            --bodyWidth: 48vw;
+            /* Local variable  */
+            display: inline-block;
+            background-color: rgb(215, 147, 58);
+            height: var(--defHeight);
+            width: var(--bodyWidth);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Header
+    </div>
+    <div class="body">Body-1</div>
+    <div class="body-2">Body-2</div>
+</body>
+</html>
