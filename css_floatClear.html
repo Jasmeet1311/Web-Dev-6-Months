@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear </title>
+    <style>
+        .card{
+            border: 2px solid black;
+        }
+        img{
+            float: right;
+            /* The image will float right. It won't take the whole block space*/
+            width: 20vw;
+            height: 20vh;
+        }
+        .container{
+            border: 2px solid violet;
+            display: flow-root;
+            /* The image will not overflow after applying this property */
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: both;
+            /* clear any float from both the sides */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">       
+        <img src="https://tse1.mm.bing.net/th?id=OIP.hqgXmy-r13g-63xcvlz6AwHaE7&pid=Api&rs=1&c=1&qlt=95&w=155&h=103" alt="image">
+        
+        <div class="card">
+            para Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure asperiores at ducimus nisi cum facere voluptates alias! In culpa blanditiis eos voluptas atque et. Accusamus ratione laboriosam similique doloremque nihil exercitationem, numquam temporibus!
+        </div>
+        <div class="card">
+            Lorem, ipsum dolor.
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus nam sequi nobis!</div>
+    </div>
+</body>
+</html>
