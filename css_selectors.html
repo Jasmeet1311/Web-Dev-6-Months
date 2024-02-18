@@ -15,9 +15,9 @@
             border: none;
         }
         /* Id selector */
-        #mydiv{
-            background-color: beige;
-        }
+        /* #mydiv{
+            background-color: rgb(177, 177, 72);
+        } */
         /* class selector */
         .container{
             color: rgb(14, 103, 103);
@@ -41,19 +41,46 @@
             background-color: aqua;
         }
         /* child selector */
+        /* direct child  */
         div > p{
             background-color: red;
         }
-        /* direct child  */
         /* descendant selector */
-        div p{
+        /* div p{
             background-color: rgb(158, 158, 20);
-        }
+        } */
         /* Attribute selector */
         [href]{
             color: blueviolet;
         }
-        
+        /* .box is 2 child of its parent element */
+        .box:nth-child(2){
+            color: aqua;
+            background-color: blue;
+        }
+        /* All elements under .boxes class */
+        .boxes *{
+            font-size: 55px;
+        }
+        /* Pseudo elements */
+        .boxes::before{   
+            content:"I am good";
+            color: aqua;
+        }
+        .boxes::after{
+            content: "I am some after content";
+            color: brown;
+        }
+
+        ::selection{
+            background-color: lightseagreen;
+        }
+        .box::first-letter{
+            font-size: 80px;
+        }
+        input::placeholder{
+            color: blue;
+        }
 
 
     </style>
@@ -71,5 +98,12 @@
     <button>click me</button>
     <a href="http://www.google.com">Go to google</a>
     <a href="http://www.facebook.com" target="_blank">Go to facebook</a>
+
+    <div class="boxes">
+        <div class="box">I am div 1</div>
+        <div class="box">I am div 2</div>
+        <div class="box">I m div 3</div>
+    </div>
+    <input type="text" placeholder="Place your text here...">
 </body>
 </html>
