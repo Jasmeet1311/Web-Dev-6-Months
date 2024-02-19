@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            height: 80vh;
+            display: flex;
+            /* To make the items horizontally center use justify content center and use it in parent container */
+            /* justify-content: space-around; */
+            /* To make items vertically aligned */
+            align-items: center;
+            /* flex-direction: column; */
+            /* New content in next line - use flex-wrap */
+            /* flex-wrap: wrap; */
+            /* align content is used when we have multiple items in multiple lines */
+            align-content:center;
+            /* First value in flex flow is flex direction and then flex wrap value */
+            /* flex-flow: row wrap; */
+            /* Using gap property there will be a gap harizontally and vertically between the items */
+            /* gap: 9px; */
+            /* row-gap: 3px;
+            column-gap: 9px; */
+
+            /* WE can combine row gap and column gap */
+            gap: 3px 9px;
+        }
+        .item{
+            height: 6rem;
+            width: 6rem;
+            /* margin: 14px; */
+            border: 2px solid black;
+            background-color: rgb(65, 65, 181);
+            /* flex grow makes the element take equal space acc to the width of the screen */
+            /* flex-grow: 1; */
+            
+        }
+        .order-1{
+            /* Order is an item property. */
+            /* By default the order of the items is 0 */
+            /* If order is greater then position of the element will be at last */
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .item1{
+            /* flex-grow: 3; */
+            /* The ability of an item to shrink if necessary */
+            /* flex-shrink: 2; */
+            align-self: flex-end;
+        }
+        .item2{
+            /* With this property you can make the individual item align at flex start or end */
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item item2">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item order-1">10</div>
+        <!-- <div class="item order-2">Greater order</div> -->
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>    -->
+        
+        
+        
+       
+    </div>
+</body>
+</html>
