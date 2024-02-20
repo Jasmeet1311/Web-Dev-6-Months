@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform properties</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 100vw;
+            border: 2px solid red;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: rgb(193, 193, 80);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* transform: rotate will rotate the box by specified degrees or turns */
+            /* transform: rotate(0.25turn); */
+            /* 1 turn = 360 deg */
+            transform: rotate(45deg);
+
+            /* Using transform scale the box will grow 2 times its original size */
+            /* transform:scale(2); */
+            /* transform:scaleX(2);
+            transform:scaleY(2); */
+
+            /* transform skew property will change its shape either in X or in Y direction */
+            /* transform: skew(24deg); */
+            /* More than one transform property; */
+            /* transform: translateX(45%) translateY(90%) skewX(45deg); */
+            transform-origin: 0% 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>
