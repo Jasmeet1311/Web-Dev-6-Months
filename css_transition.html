@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 50vw;
+            background-color: beige;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            border: 2px solid slategrey;
+            /* transition-property:all ;
+            transition-duration: 2s;
+            transition-timing-function: ease-in; */
+            /* transition-delay: 1s; */
+
+            /* shorthand */
+            transition: all 2s ease-in 1s;
+
+        }
+        .box:hover{
+            transform:rotate(360deg);
+            background-color: rgb(235, 14, 235);
+
+        }
+    </style>
+</head>
+<body>
+    <p>CSS Transition means to move from one state to another smoothly</p>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
