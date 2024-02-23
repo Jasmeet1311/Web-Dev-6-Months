@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and transform practice</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 95vw;
+            display: grid;
+            grid-template-columns: repeat(4,200px);
+            grid-template-rows: repeat(2,200px);
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        .box{   
+            height: 100px;
+            width: 120px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            background-color:rgb(66, 184, 243);
+        }
+        .scale:hover{
+            transform: scale(2);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .scale{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+        .scaleX:hover{
+            transform: scaleX(2);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .scaleX{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+        .scaleY:hover{
+            transform: scaleY(2);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .scaleY{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+        .translate:hover{
+            transform: translate(2em,2em);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .translate{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+        .translateX:hover{
+            transform: translateX(2em);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .translateX{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+        .translateY:hover{
+            transform: translateY(2em);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .translateY{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+        .rotate:hover{
+            transform: rotate(360deg);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .rotate{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+        .Matrix:hover{
+            /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+            transform: matrix(1,0,2,2,1,1);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .Matrix{
+            background-color: rgba(56, 207, 248, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="scale">Scale</div>
+        </div>
+        <div class="box">
+            <div class="scaleX">ScaleX</div>
+        </div>
+        <div class="box">
+            <div class="scaleY">ScaleY</div>
+        </div>
+        <div class="box">
+            <div class="translate">Translate</div>
+        </div>
+        <div class="box">
+            <div class="translateX">TranslateX</div>
+        </div>
+        <div class="box">
+            <div class="translateY">TranslateY</div>
+        </div>
+        <div class="box">
+            <div class="Matrix">Matrix</div>
+        </div>
+        <div class="box">
+            <div class="rotate">Rotate</div>
+        </div>
+    </div>
+</body>
+</html>
