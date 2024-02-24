@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 80vw;
+            display: flex;
+            justify-content:center;
+            background-color: lightseagreen;
+        }
+        .box{
+            height: 80px;
+            width: 80px;
+            background-color: rgb(12, 101, 180);
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: animation 3s ease-in 3,animation1 3s ease-in-out  infinite;
+            /* animation-iteration-count: 3; */
+            /* animation-direction: reverse; */
+            /* Using animation fill mode the animation will retain its property after the animation has completed */
+            /* animation-fill-mode: forwards; */
+        }
+        .box-1{
+            height: 80px;
+            width: 80px;
+            background-color: rgb(180, 12, 121);
+            animation: animation1 3s ease-in-out  infinite  ;
+        }
+        @keyframes animation {
+            from{
+                background-color: blue;
+            }
+            to{
+                background-color: yellow;
+            }
+        }
+        @keyframes animation1 {
+            0%{
+                transform: rotate(0deg);
+            }
+            20%{
+                transform: rotate(45deg);
+            }
+            50%{
+                transform: rotate(90deg);
+            }
+            80%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box-1"></div>
+
+    </div>
+</body>
+</html>
