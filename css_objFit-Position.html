@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object fit and position</title>
+    <style>
+        .container{
+            height: 40vh;
+            width: 40vw;
+            background-image: url(https://tse2.mm.bing.net/th?id=OIP.Ruo7CeSuVRxnjlw1r-9tMgHaHa&pid=Api&P=0&h=180);
+            background-position: center center;
+            border: 2px solid black;
+            background-repeat: no-repeat;
+
+        }
+        img{
+            height: 40vh;
+            width: 40vw;
+            /* object fit cover will crop the image and fit inside specified height and width. It will maintain the aspect ratio of the image and will make the image fit inside the container */
+            object-fit: cover;
+            /* Obj fit contain will show the whole image and will leave the space it can't cover */
+            /* object-fit: contain; */
+            /* object-position top right means show top and right position of image and crop the rest */
+            /* object-position: top right; */
+            /* object fit fill will cover the entire space but the image will get distorted */
+            /* object-fit: fill; */
+
+            object-position: 10px 20px; /*used to set position from left and top of the container*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://tse2.mm.bing.net/th?id=OIP.xNXnPgBI7IKrnUvOkhhC4QHaEK&pid=Api&P=0&h=180" alt="image"> -->
+    </div>
+</body>
+</html>
