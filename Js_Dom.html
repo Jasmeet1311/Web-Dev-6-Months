@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .box{
+            height: 23px;
+            width: 23px;
+            border: 2px solid black;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <script>
+        document.title ="About DOM";
+        console.log(document.body.childNodes);    
+        console.log(document.body.childNodes[0]);    
+        console.log(document.body.childNodes[1].childNodes); 
+        let cont = document.body.childNodes[1];
+        console.log(cont.lastChild);   // accessing child nodes  
+        console.log(cont.firstChild);   
+        console.log(cont.firstElementChild.parentElement);
+        // document.body.children  --> only html elements
+        // document.body.childNodes --> all nodes including text nodes
+        // document.body.children[0].children[0].nextElementSibling  -->Box 2
+
+    </script>
+</body>
+</html>
