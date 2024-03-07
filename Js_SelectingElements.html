@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements by Id and class</title>
+    <style>
+        .box{
+            height: 34px;
+            width: 34px;
+            border: 2px solid black;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box" id="red">5</div>
+    </div>
+</body>
+<script>
+    // let box = document.getElementsByClassName("box");
+    // console.log(box);
+    // box[1].style.backgroundColor ="hotpink";
+    // box[2].style.backgroundColor ="lightblue";
+    // let redbox = document.getElementById("red");
+    // redbox.style.backgroundColor="red";
+    // document.querySelector(".box").style.backgroundColor="lightgreen"; // It will select only first matching class that is box after container
+    let box = document.querySelectorAll(".box");
+    // console.log(box);   // it returns nodelist --> cannot give it style property
+    box.forEach((e)=>{
+        e.style.backgroundColor = "green";
+        // console.log(e);
+    })
+    let div = document.getElementsByTagName("div");
+    console.log(div);
+</script>
+</html>
