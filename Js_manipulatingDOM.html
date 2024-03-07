@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and deleting elements in DOM</title>
+    <style>
+        .box{
+            display: inline;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container bg-red green">
+        <div class="box" data-mydata="this is some information">Box 1</div>
+        <div class="box-2" hidden>Box 2</div>
+        <table id="table">This is a table</table>
+    </div>
+    <script>
+        // let cont = document.querySelector(".container").innerHTML;
+        // console.log(cont);
+        // // outer HTML = inner HTML + element itself
+        // let box = document.querySelector(".container").outerHTML;
+        // console.log(box);
+
+        // let node = document.querySelector(".container").nodeName;
+        // console.log(node);
+        // let tag = document.querySelector(".container").tagName;
+        // console.log(tag);
+        
+        // let text = document.querySelector(".box").textContent;
+        // console.log(text);
+
+        // document.querySelector(".box-2").hidden =false;  
+        
+        // attribute methods
+        // let ans = document.querySelector(".box").hasAttribute("class");
+        // console.log(ans);
+        // let ans1 = document.querySelector(".box").getAttribute("class");
+        // console.log(ans1);
+        // let ans2 = document.querySelector(".box").setAttribute("style","color:red");
+        // console.log(ans2);
+        // document.querySelector(".box").setAttribute("id","good");
+        // document.querySelector(".box").removeAttribute("id");
+        // let attribute = document.querySelector(".box").attributes;
+        // console.log(attribute);
+        // document.designMode ="on";
+        // let data = document.querySelector(".box").dataset;
+        // console.log(data);
+
+        let div = document.createElement("div");
+        div.innerHTML="<h3>This is some text </h3>";
+        div.className="alert";
+        document.body.append(div);  // At last
+        // document.body.prepend(div);    // At beginning
+        // document.body.before(div); // before body
+        // document.body.after(div);   // after body
+        
+        let cont = document.querySelector('.container');
+        cont.insertAdjacentHTML("beforebegin","<i>This is in italics</i>");
+
+        let table = document.getElementById("table");
+        table.remove();
+
+        let list = document.querySelector(".container").classList;
+        console.log(list);
+        let name = document.querySelector(".container").className;
+        console.log(name);
+        document.querySelector(".container").classList.add("newClass");
+        document.querySelector(".container").classList.toggle("green");
+
+    </script>
+</body>
+</html>
