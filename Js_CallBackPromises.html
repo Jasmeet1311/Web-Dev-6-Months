@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallBack and Promises in JS</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+    //   function mydisplayer(some){
+    //     document.getElementById("demo").innerHTML = some;
+    //   }
+    //   function myCalculator(num1,num2,CallBack){
+    //     let sum = num1+num2;
+    //     CallBack(sum);
+    //   }
+    //   myCalculator(12,1,mydisplayer);
+
+    function loadScript(src,CallBack){
+       let script = document.createElement("script");
+       script.src= src;
+       script.onload = ()=> CallBack(script);
+       document.head.append(script);
+    }
+    loadScript("Js_strings.js",()=>{
+        alert("Script is loaded");
+    })
+
+    // Promise
+
+    let prom1 = new Promise((resolve,reject)=>{
+      let a =Math.random();
+      if (a>1) {
+        reject("No random number generated");
+      }
+      else{
+        console.log("Yes I am done");
+        resolve("It is resolved");
+      }
+    })
+    let prom2 = new Promise((resolve,reject)=>{
+      let a =Math.random();
+      if (a<1) {
+        reject("No random number generated 2");
+      }
+      else{
+        console.log("Yes I am done 2");
+        resolve("It is resolved 2");
+      }
+    })
+
+    // let prom = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     console.log('Promise resolved');
+    //     resolve("Problem resolved")
+    //   }, 3000);
+    // })
+    // prom1.then((a)=>{
+    //   console.log(a);  
+    //   // prom.then returns value of resolve
+    // }).catch((err)=>{
+    //   console.log(err);
+    // })
+
+    // let p3 = Promise.all([prom1,prom2]);  // works only if both the promises are resolved
+    // p3.then((resolve)=>{
+    //   console.log(resolve);
+    // }).catch((err)=>{
+    //   console.log(err);
+    // })
+    let p3 = Promise.allSettled([prom1,prom2]);  // works only if both the promises are exxecuted --> resolve or reject does not matter
+    p3.then((resolve)=>{
+      console.log(resolve);
+    }).catch((err)=>{
+      console.log(err);
+    })
+    </script>
+  </body>
+</html>
