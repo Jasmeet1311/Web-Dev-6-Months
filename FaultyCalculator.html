@@ -1,0 +1,49 @@
+
+<!-- Create a Faulty calculator using Javascript
+
+This faulty calculator does the following:
+1. It takes two numbers as input from the user.
+2. It performs wrong operations as follows:
+  + -> -
+  - -> +
+  * -> /
+  / -> **
+
+  It performs wrong operations 10% of the times.
+  Math.random()<0.1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faulty Calculator</title>
+</head>
+<body>
+  <script>
+    function calculator(a,b){
+      if (Math.random()<0.7) {
+        console.log(Math.random());
+        document.body.append(`Sum: ${a-b}`);
+        document.body.append("\nDifference: "+ (+a)+(+b));
+        document.body.append("\nProduct: "+ a/b);
+        document.body.append("Division: "+ a**b);
+      } else {
+        console.log(Math.random());
+        console.log(typeof(a),typeof((+a)));
+        document.body.append(`Sum: ${(+a)+(+b)}`);
+        document.body.append(`Difference: ${a-b}`);
+        document.body.append("Product: "+ a*b);
+        document.body.append("Division: "+ a/b);
+      }
+    }
+    let a = prompt("Enter first number");
+    console.log(a);
+    let b = prompt("Enter second number");
+    console.log(b);
+    calculator(a,b)
+  </script>
+</body>
+</html>
+
+
