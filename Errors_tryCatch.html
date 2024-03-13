@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling in JS</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter first number");
+        let b = prompt("Enter second number");
+        //  a and b are strings
+        // let sum = a+b;
+        // so a+b will concatenate the strings
+        if (a==isNaN() || b== isNaN()) {
+            throw SyntaxError("Enter a number");
+        }
+        let sum = parseInt(a)+parseInt(b);
+        alert("Sum is "+sum);
+        function main(){
+            try {
+               console.log(x*4); 
+               return 0;
+            } catch (error) {
+                console.log("Unknown Error occured");
+                return 1;
+            }
+            finally{
+                console.log("This is some important work");
+            }
+            // code in finally will be executed after return statement
+        }
+        main();
+    </script>
+</body>
+</html>
