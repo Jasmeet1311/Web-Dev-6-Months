@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Exercise</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3,1fr);
+            grid-gap: 4px;
+        
+        }
+        .box{
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .box img{
+            height: 32vh;
+            width: 32vw;
+        }
+        .heading{
+            text-align: center;
+            font-weight: 900;
+            font-size: xx-large;
+            color: blue;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <section class="blog">
+        <div class="heading">BLOG</div>
+        <div class="container">
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2023/09/16/09/12/chrysanthemum-8256282_1280.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2024/03/02/19/30/magnolia-8609277_640.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2023/05/10/11/04/sambucus-nigra-7983580_640.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2023/04/17/19/27/plum-blossom-7933169_640.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2023/03/06/16/17/narcissus-7833840_640.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2015/01/29/11/36/roses-616013_640.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2016/10/06/14/07/sunflowers-1719119_640.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2017/04/10/15/06/cherry-blossoms-2218781_640.jpg" alt="img"></div>
+            <div class="box"><img src="https://cdn.pixabay.com/photo/2015/01/29/11/36/roses-616013_640.jpg" alt="img"></div>
+        </div>
+    </section>
+
+</body>
+</html>
