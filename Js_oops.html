@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs in JS</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            a:1,
+            b:2
+        }
+        console.log(obj);
+
+        let animal={
+            eats: true
+        }
+        let rabbit={
+            jumps:true
+        }
+        rabbit.__proto__ = animal;    // sets rabbit.prototype = animal
+        console.log(rabbit);
+        console.log(rabbit.eats);
+        class Animal{
+            constructor(name){
+                this.name = name;
+                console.log("object is created");
+            }
+            eat(){
+                console.log("Animal can eat");
+            }
+            jumps(){
+                console.log("Animal can jump");
+            }
+        }
+        class Lion extends Animal{
+            constructor(name){
+                super(name);
+                console.log("lion constructor has got one more function");
+            }
+            roar(){
+                console.log("Lion can roar");
+            }
+        }
+
+        let a = new Animal("Bunny");
+        console.log(a);
+        let l = new Lion("Sheeru");
+        console.log(l);
+//      Using getters and setters
+        class User{
+            get(){
+                return this.name;
+            }
+            set(name){
+                this.name = name;
+                return 0;
+            }
+        }
+
+        let u = new User();
+        console.log(u.set("Jasmeet"));
+        console.log(u.get());
+        
+        
+        </script>
+</body>
+</html>
