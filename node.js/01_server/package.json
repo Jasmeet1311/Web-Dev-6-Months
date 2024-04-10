@@ -1,0 +1,19 @@
+{
+  "name": "dummy",
+  "version": "1.0.0",
+  "description": "This is a dummy npm project. Using it for learning purpose",
+  "main": "01_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dummy",
+    "project"
+  ],
+  "author": "Jasmeet",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "slugify": "^1.6.6"
+  }
+}
